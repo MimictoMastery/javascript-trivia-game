@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome </title>
+<link rel="stylesheet" href="game.css">
+
+</head>
+<body>
+
+<div id="space"></div>
+
+<div class="trivia-box">
+    <h1>JavaScript Trivia</h1>
+
+    <h2 id="question">
+        What keyword is used to declare a constant?
+    </h2>
+
+    <div class="answers">
+        <button onclick="checkAnswer('A')">A. let</button>
+
+        <button onclick="checkAnswer('B')">B. const</button>
+
+        <button onclick="checkAnswer('C')">C. var</button>
+
+        <button onclick="checkAnswer('D')">D. function</button>
+    </div>
+
+    <p id="result"></p>
+
+    <button id="nextBtn" onclick="nextQuestion()">
+        Next Question
+    </button>
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+body {
+
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+
+    background: radial-gradient(
+        ellipse at bottom,
+        #1b2735 0%,
+        #090a0f 100%
+    );
+}
+
+
+#space {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+
+}
+
+
+.star {
+
+    position: absolute;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 8px white;
+
+     transition: opacity 1s ease, background-color 1s ease;
+
+     animation: moveStars 200s linear infinite;
+
+}
+
+
+
+@keyframes moveStars {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+
+    to {
+
+        transform: translateY(-2000px);
+
+    }
+
+}
+
+
+
+h1 {
+
+    position: absolute;
+
+    top: 10%;
+
+    width: 100%;
+
+    font-size: 60px;
+
+    letter-spacing: 10px;
+
+
+    text-shadow:
+
+    0 0 10px white,
+
+    0 0 20px lime,
+
+    0 0 40px green;
+
+}
+
+
+
+#game-container {
+
+    margin-top: 300px;
+
+    padding: 40px;
+
+    border: 4px solid blue;
+
+    display: inline-block;
+
+    background: rgba(0,0,0,.5);
+
+}
+
+.codequestarcade {
+    position: center;
+    font-size: 44px;
+    color: white;
+    top: 10%;
+    width: 100%;
+
+    text-shadow: 
+    0 0 10px white,
+    0 0 20px rgb(242, 7, 140),
+    0 0 30px rgb(35, 2, 35);
+
+}
+
+.blink {
+    position: absolute;
+    top: 450px;
+    left: 8px; 
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: white;
+
+    text-shadow:
+    0 0 5px white,
+    0 0 10px grey,
+    0 0 20px silver;
+
+    animation: blink-animation 1s infinite;
+}
+
+.PowerUpYour {
+    color: blue;
+    position: absolute;
+    top: 500px;
+    left: 200px;
+}
+
+.powerup {
+    color:yellow;
+}
+
+@keyframes blink-animation {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.press-start a {
+
+
+    font-size: 32px;
+
+    color: blue;
+
+    display: inline-block;
+
+
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+
+    background: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+
+    border-radius: 5px;
+
+
+    filter: drop-shadow(0 0 10px currentColor);
+
+}
+
+
+
+.press-start a:hover {
+
+
+    background: blue;
+
+    color:white;
+
+
+}
