@@ -32,7 +32,7 @@ h1 {
 
 }
 
-
+/*
 .trivia-box {
     background: white;
     width: 500px;
@@ -48,10 +48,72 @@ h1 {
 
 
     text-shadow:
-    0 0 5px white,
-    0 0 5px rgb(12, 48, 175),
-    0 0 10px blue;
+    0 0 5px rgb(207, 221, 242),
+    0 0 5px rgb(43, 63, 135),
+    0 0 10px rgb(88, 88, 198);
 }
+*/
+
+/*.trivia-box {
+    background: white;
+    width: 500px;
+    padding: 30px;
+    border-radius: 50px;
+
+    border: 3px solid #00ffff;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 25px cyan,
+        0 0 50px #00bfff,
+        0 0 80px blue;
+}
+*/ 
+.trivia-box {
+    background: white;
+    width: 500px;
+    padding: 30px;
+    border-radius: 50px;
+
+    border: 3px solid #00ffff;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 25px cyan,
+        0 0 50px #00bfff,
+        0 0 80px blue;
+
+
+    animation: glow 2s infinite ease-in-out;
+
+
+}
+
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 0 10px white,
+            0 0 20px cyan,
+            0 0 40px blue;
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px white,
+            0 0 40px cyan,
+            0 0 80px blue;
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px white,
+            0 0 20px cyan,
+            0 0 40px blue;
+    }
+}
+
 
 
 button {
@@ -63,8 +125,8 @@ button {
 
     font-size: 18px;
 
-    background: #111;
-    color: white;
+    background: #d5cedd;
+    color: rgb(17, 26, 60);
 
     border: 2px solid cyan;
     border-radius: 20px;
@@ -72,7 +134,7 @@ button {
     cursor: pointer;
 
     box-shadow:
-    0 0 10px cyan;
+    0 0 10px rgb(108, 217, 217);
 
 }
 

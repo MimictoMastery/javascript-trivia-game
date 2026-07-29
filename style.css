@@ -1,205 +1,236 @@
+/* COLOR VARIABLES */
+
+
+:root {
+/* Neon */
+
+    --cyan:#00FFFF;
+    --purple:#8A2BE2;
+    --pink:#FF1493;
+    --green:#39FF14;
+    --yellow:#FFFF33;
+    --white:#FFFFFF;
+
+    /* Space */
+
+    --black:#000000;
+    --dark-purple:#090014;
+    --indigo:#4B0082;
+}
+
+
+* {
+   box-sizing:border-box;
+}
+
+html {
+    height:100%;
+}
+
+
 body {
+    margin:0;
+    min-height:100vh;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    position:relative;
 
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: white;
-
-    background: radial-gradient(
-        ellipse at bottom,
-        #1b2735 0%,
-        #090a0f 100%
-    );
+    background:
+    radial-gradient(
+    ellipse at bottom,
+    var(--indigo),
+    var(--dark-purple) 50%,
+    var(--black)
+  );
 }
 
-
+/* STAR's */
 #space {
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: -1;
-
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
 }
-
 
 .star {
+    position:absolute;
+    background:var(--white);
+    border-radius:50%;
+box-shadow:
+    0 0 8px var(--white),
+    0 0 15px var(--green),
+    0 0 30px var(--green);
 
-    position: absolute;
-
-    background: white;
-
-    border-radius: 50%;
-
-    box-shadow: 0 0 8px white;
-
-     transition: opacity 1s ease, background-color 1s ease;
-
-     animation: moveStars 200s linear infinite;
-
+    animation:
+    moveStars 200s linear infinite;
 }
-
-
 
 @keyframes moveStars {
-
     from {
-
-        transform: translateY(0);
-
+        transform:translateY(0);
     }
-
 
     to {
-
-        transform: translateY(-2000px);
-
+        transform:translateY(-2000px);
     }
-
 }
 
-
+.arcade-screen {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:150px;
+    padding:60px;
+    position:relative;
+    z-index:1;
+}
 
 h1 {
+    margin:0;
+    font-size: 
+    clamp(2.5rem, 8vw, 4rem);
+    color: transparent;
 
-    position: absolute;
+    background:
+     linear-gradient(
+       90deg,
+       var(--cyan),
+       var(--purple),
+       var(--pink)
+    );
 
-    top: 10%;
-
-    width: 100%;
-
-    font-size: 60px;
-
-    letter-spacing: 10px;
-
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:var(--white);
 
     text-shadow:
-
-    0 0 10px white,
-
-    0 0 20px lime,
-
-    0 0 40px green;
-
+        0 0 30px var(--white),
+        0 0 20px var(--pink),
+        0 0 30px var(--purple);
 }
-
-
 
 #game-container {
+   width:100%;
+   max-width:380px;
+   padding:50px;
+   border:15px solid var(--cyan);
+   border-radius:20px;
 
-    margin-top: 300px;
+    background:
+    rgba(0,0,0,.75);
 
-    padding: 40px;
-
-    border: 4px solid blue;
-
-    display: inline-block;
-
-    background: rgba(0,0,0,.5);
-
+    box-shadow:
+    0 0 10px var(--cyan),
+    0 0 25px var(--purple),
+    inset 0 0 40px var(--purple);
 }
+/* GAME TEXT*/
 
 .codequestarcade {
-    position: center;
-    font-size: 44px;
-    color: white;
-    top: 10%;
-    width: 100%;
+      margin-top:0;
+      font-size:
 
-    text-shadow: 
-    0 0 10px white,
-    0 0 20px rgb(242, 7, 140),
-    0 0 30px rgb(35, 2, 35);
+    clamp(1.5rem,5vw,2rem);
+    color:var(--white);
 
+    text-shadow:
+        0 0 10px var(--white),
+        0 0 20px var(--pink),
+        0 0 30px var(--purple);
+}
+
+/*would like to make the power up move, later*/
+
+.powerup {
+    color:var(--yellow);
+    font-size:1.3rem;
+
+    text-shadow:
+    0 0 10px var(--yellow);
+}
+
+.powerup-javascript {
+    color:var(--cyan);
+    font-size:1.3rem;
+
+    text-shadow:
+    0 0 10px var(--cyan);
 }
 
 .blink {
-    position: absolute;
-    top: 450px;
-    left: 8px; 
-
-    font-size: 16px;
-    font-weight: bold;
-
-    color: white;
+    color:var(--white);
+    font-weight:bold;
 
     text-shadow:
-    0 0 5px white,
-    0 0 10px grey,
-    0 0 20px silver;
+        0 0 5px var(--white),
+        0 0 15px var(--cyan);
 
-    animation: blink-animation 1s infinite;
-}
-
-.PowerUpYour {
-    color: blue;
-    position: absolute;
-    top: 500px;
-    left: 200px;
-}
-
-.powerup {
-    color:yellow;
+    animation:
+        blink-animation 1s infinite;
 }
 
 @keyframes blink-animation {
 
     0% {
-        opacity: 1;
+        opacity:1;
     }
-
     50% {
-        opacity: 0;
+         opacity:0;
     }
 
     100% {
-        opacity: 1;
+        opacity:1;
     }
+}
 
+.press-start {
+    display:flex;
+    justify-content:center;
 }
 
 .press-start a {
+   display:inline-block;
+   padding:12px 25px;
+   font-size:
 
+    clamp(1rem,4vw,1.5rem);
+    font-weight:bold;
+    color:var(--white);
 
-    font-size: 32px;
+    text-decoration:none;
+    border-radius:15px;
 
-    color: blue;
+    background:
+    linear-gradient(
+       45deg,
+        var(--purple),
+        var(--pink)
+    );
 
-    display: inline-block;
-
-
-    margin-top: 20px;
-
-    padding: 10px 20px;
-
-
-    background: white;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-
-    border-radius: 5px;
-
-
-    filter: drop-shadow(0 0 10px currentColor);
-
+    box-shadow:
+        0 0 10px var(--pink),
+        0 0 25px var(--purple);
+    transition:.3s;
 }
 
-
-
 .press-start a:hover {
+    transform:scale(1.1);
+    background:var(--cyan);
+
+    box-shadow:
+        0 0 20px var(--cyan),
+        0 0 40px var(--pink);
+}
+
+/* MOBILE */
 
 
-    background: blue;
-
-    color:white;
-
-
+@media(max-width:500px){
+    #game-container {
+        padding:20px;
+    }
 }
