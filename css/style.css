@@ -1,15 +1,11 @@
 
 :root {
-/* Neon */
-
     --cyan:#00FFFF;
     --purple:#8A2BE2;
     --pink:#FF1493;
     --green:#39FF14;
     --yellow:#FFFF33;
     --white:#FFFFFF;
-
-    /* Space */
 
     --black:#000000;
     --dark-purple:#090014;
@@ -43,7 +39,6 @@ body {
   );
 }
 
-/* STAR's */
 #space {
     position:absolute;
     inset:0;
@@ -89,7 +84,7 @@ box-shadow:
 
 h1 {
     margin:0;
-    font-size: 
+    font-size: 50px;
     clamp(2.5rem, 8vw, 4rem);
     color: transparent;
 

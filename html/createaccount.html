@@ -1,66 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Name</title>
+
+    <title>Create Account</title>
 
     <link rel="stylesheet" href="../css/createaccount.css">
 
 </head>
+
+
 <body>
-    
+
+
 <h1>Create Your Username</h1>
+
+
 <div class="create-account">
 
-<form action="/action_page.php">
-  <label for="username">User Name</label><br>
-  <input type="text" id="username" name="username" value="John"><br>
 
-<form action="/action_page.php">
-  <label for="firstname">First Name </label><br>
-  <input type="text" id="firstname" name="firstname" value="John"><br>
+<form id="createAccountForm">
 
 
-  <label for="lastname">Last name:</label><br>
-  <input type="text" id="lastname" name="lastname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form>
+<label for="username">Username</label>
+<br>
 
-<label for="password">Password:</label>
-
-<label for="confirmPassword">Confirm Password</label>
-    <input
-        type="password"
-        id="confirmPassword"
-        minlength="8"
-        required
-    >
+<input 
+    type="text" 
+    id="username" 
+    name="username"
+    placeholder="Create Username"
+>
+<br><br>
 
 
-    <button type="submit">
-        Create Account
-    </button>
+<label for="firstname">First Name</label>
+<br>
 
-</form>
+<input 
+    type="text" 
+    id="firstname" 
+    name="firstname"
+    placeholder="First name"
+>
+
+<br><br>
+
+
+<label for="lastname">Last Name</label>
+<br>
+
+<input 
+    type="text" 
+    id="lastname" 
+    name="lastname"
+    placeholder="Last name"
+>
+
+<br><br>
+
+
+<label for="password">
+Password
+</label>
+
+<br>
 
 <input
     type="password"
     id="password"
     name="password"
-    placeholder="Enter your password"
+    minlength="8"
+    placeholder="Create password"
 >
 
-<p class="press-start">
-            <a href="prologue.html">
-                Create Account
-            </a>
-        </p>
-    
-    </div>
+
+<br><br>
 
 
-    </body>
-        </body>
+<label for="confirmPassword">
+Confirm Password
+</label>
+
+<br>
+
+<input
+    type="password"
+    id="confirmPassword"
+    name="confirmPassword"
+    minlength="8"
+    placeholder="Confirm password"
+>
+
+
+<br><br>  
+
+
+<button class="submit" type="submit">
+    Create Account
+</button>
+
+</form>
+
+</div>
+
+<script src="../js/account.js"></script>
+
+</body>
+
 </html>

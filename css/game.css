@@ -1,123 +1,104 @@
+:root {
+    --cyan:#00FFFF;
+    --purple:#8A2BE2;
+    --pink:#FF1493;
+    --green:#39FF14;
+    --yellow:#FFFF33;
+    --white:#FFFFFF;
+
+    --black:#000000;
+    --dark-purple:#090014;
+    --indigo:#4B0082;
+
+}
+
+* {
+   box-sizing:border-box;
+}
+
+html {
+    height:100%;
+}
 
 
 body {
-
-    margin: 0;
+     margin: 0;
     height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-
+    
     font-family: Arial, sans-serif;
     text-align: center;
-    color: black;
+    color:var(--black);
 
     background: radial-gradient(
         ellipse at bottom,
         #0a6dde 0%,
         #090a0f 100%
     );
+
 }
 
 h1 {
-
     color: blue;
 
     text-shadow:
     0 0 5px white,
     0 0 10px cyan,
     0 0 20px blue;
-
 }
 
-/*
 .trivia-box {
-    background: white;
+    background: var(--white);
     width: 500px;
     padding: 30px;
     border-radius: 50px;
+
     text-align: center;
-
-
     position: absolute;
     top: 10%;
     font-size: 20px;
     letter-spacing: 5px;
 
-
-    text-shadow:
-    0 0 5px rgb(207, 221, 242),
-    0 0 5px rgb(43, 63, 135),
-    0 0 10px rgb(88, 88, 198);
-}
-*/
-
-/*.trivia-box {
-    background: white;
-    width: 500px;
-    padding: 30px;
-    border-radius: 50px;
-
-    border: 3px solid #00ffff;
+    border: 5px solid cyan;
 
     box-shadow:
-        0 0 10px white,
-        0 0 25px cyan,
-        0 0 50px #00bfff,
-        0 0 80px blue;
-}
-*/ 
-.trivia-box {
-    background: white;
-    width: 500px;
-    padding: 30px;
-    border-radius: 50px;
-
-    border: 3px solid #00ffff;
-
-    box-shadow:
-        0 0 10px white,
-        0 0 25px cyan,
-        0 0 50px #00bfff,
-        0 0 80px blue;
-
+     0 0 10px white,
+    0 0 25px cyan,
+    0 0 50px #00bfff,
+    0 0 80px blue;
 
     animation: glow 2s infinite ease-in-out;
-
-
 }
-
 
 @keyframes glow {
 
     0% {
+
         box-shadow:
-            0 0 10px white,
-            0 0 20px cyan,
-            0 0 40px blue;
+        0 0 10px white,
+        0 0 20px cyan,
+        0 0 40px blue;
     }
 
     50% {
         box-shadow:
-            0 0 20px white,
-            0 0 40px cyan,
-            0 0 80px blue;
+        0 0 20px white,
+        0 0 40px cyan,
+        0 0 80px blue;
     }
 
     100% {
         box-shadow:
-            0 0 10px white,
-            0 0 20px cyan,
-            0 0 40px blue;
+        0 0 10px white,
+        0 0 20px cyan,
+        0 0 40px blue;
     }
 }
 
-
-
 button {
-
     display: block;
     width: 100%;
     margin: 10px 0;
@@ -126,7 +107,7 @@ button {
     font-size: 18px;
 
     background: #d5cedd;
-    color: rgb(17, 26, 60);
+    color: rgb(17,26,60);
 
     border: 2px solid cyan;
     border-radius: 20px;
@@ -134,10 +115,9 @@ button {
     cursor: pointer;
 
     box-shadow:
-    0 0 10px rgb(108, 217, 217);
+    0 0 10px rgb(108,217,217);
 
 }
-
 
 button:hover {
 
@@ -145,20 +125,55 @@ button:hover {
     color: black;
 
     transform: scale(1.05);
+}
+
+.correct {
+    background: #ff1493;
+    color: white;
+    border-color: pink;
+    box-shadow:
+        0 0 10px pink,
+        0 0 25px hotpink,
+        0 0 50px #ff1493;
+}
+
+.wrong {
+    background: #8a2be2;
+    color: white;
+    border-color: violet;
+
+    box-shadow:
+        0 0 10px violet,
+        0 0 25px purple,
+        0 0 50px #8a2be2;
 
 }
+#highScorePage {
+    width: 80%;
+    margin: 20px auto;
+    background: #111a3c;
+    color: cyan;
+}
+
+
+
+#highScorePage:hover {
+    background: cyan;
+    color: black;
+}
+
 
 #result {
     font-size: 22px;
     font-weight: bold;
 }
 
-
 #space {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
+
     z-index: -1;
 }
 
@@ -167,12 +182,14 @@ button:hover {
     position: absolute;
     background: white;
     border-radius: 50%;
+
     box-shadow:
-        0 0 5px white,
-        0 0 10px cyan;
+    0 0 5px white,
+    0 0 10px cyan;
 
     animation: moveStars linear infinite;
 }
+
 
 
 @keyframes moveStars {
@@ -181,9 +198,9 @@ button:hover {
         transform: translateY(0);
     }
 
+
     to {
-        transform: translateY(100vh);
+        transfom: translateY(100vh);
     }
+
 }
-
-
