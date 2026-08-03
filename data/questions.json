@@ -1,0 +1,111 @@
+[
+    {
+        "question": "What keyword is used to declare a constant in JavaScript?",
+        "answers": {
+            "A": "let",
+            "B": "const",
+            "C": "var",
+            "D": "static"
+        },
+        "correct": "B"
+    },
+
+    {
+        "question": "Which symbol is used for a single-line comment in JavaScript?",
+        "answers": {
+            "A": "//",
+            "B": "<!-- -->",
+            "C": "#",
+            "D": "**"
+        },
+        "correct": "A"
+    },
+
+    {
+        "question": "Which keyword creates a variable that can be changed?",
+        "answers": {
+            "A": "change",
+            "B": "const",
+            "C": "let",
+            "D": "variable"
+        },
+        "correct": "C"
+    },
+
+    {
+        "question": "Which command prints information to the browser console?",
+        "answers": {
+            "A": "print()",
+            "B": "console.log()",
+            "C": "display()",
+            "D": "write()"
+        },
+        "correct": "B"
+    },
+
+    {
+        "question": "Which HTML element is used to connect JavaScript to a webpage?",
+        "answers": {
+            "A": "<style>",
+            "B": "<javascript>",
+            "C": "<script>",
+            "D": "<code>"
+        },
+        "correct": "C"
+    },
+
+    {
+        "question": "Which data type represents true or false?",
+        "answers": {
+            "A": "String",
+            "B": "Boolean",
+            "C": "Number",
+            "D": "Array"
+        },
+        "correct": "B"
+    },
+
+    {
+        "question": "Which method adds an item to the end of an array?",
+        "answers": {
+            "A": "push()",
+            "B": "add()",
+            "C": "append()",
+            "D": "insert()"
+        },
+        "correct": "A"
+    },
+
+    {
+        "question": "What does DOM stand for?",
+        "answers": {
+            "A": "Document Object Model",
+            "B": "Digital Online Method",
+            "C": "Data Object Manager",
+            "D": "Document Order Map"
+        },
+        "correct": "A"
+    },
+
+    {
+        "question": "Which operator checks both value and data type?",
+        "answers": {
+            "A": "=",
+            "B": "==",
+            "C": "===",
+            "D": "!="
+        },
+        "correct": "C"
+    },
+
+    {
+        "question": "Which keyword is used to create a function?",
+        "answers": {
+            "A": "function",
+            "B": "method",
+            "C": "create",
+            "D": "func"
+        },
+        "correct": "A"
+    }
+]

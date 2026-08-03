@@ -5,33 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Trivia</title>
-<link rel="stylesheet" href="../css/game.css">
+
+    <link rel="stylesheet" href="../css/game.css">
 
 </head>
 <body>
 
-<div id="space"></div>
+<div class="game-container">
 
-<div class="trivia-box">
-    <h1>JavaScript Trivia</h1>
+    <div class="score-board">SCORE: <span id="score">0</span></div>
 
-    <h2 id="question"> Loading Question...</h2>
+    <div class="question-progress">
 
-    <div class="answers">
-        <button onclick="checkAnswer('A')">A.</button>
-        <button onclick="checkAnswer('B')">B.</button>
-        <button onclick="checkAnswer('C')">C.</button>
-        <button onclick="checkAnswer('D')">D.</button>
+        <div class="light active"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+
     </div>
 
-    <p id="result"></p>
-    <button id="highScorePage" onclick="goToHighScores()" style="display:none;">
-        View High Scores
-    </button>
+    <div class="neon-line"></div>
+
+    <div class="trivia-box">
+        <h1>Code Quest Arcade</h1>
+
+        <h2 id="question">Loading Question...</h2>
+
+        <div class="answers">
+            <button onclick="checkAnswer('A')">A.</button>
+            <button onclick="checkAnswer('B')">B.</button>
+            <button onclick="checkAnswer('C')">C.</button>
+            <button onclick="checkAnswer('D')">D.</button>
+        </div>
+
+        <p id="result"></p>
+        <button id="highScorePage" onclick="goToHighScores()" style="display:none;">
+            View High Scores
+        </button>
+    </div>
+
+    <div class="quote-box">
+      
+        <h3>80s Quote</h3>
+           <p id="quote">Loading quote...</p>
+    </div>
+
 </div>
 
 <script src="../js/game.js"></script>
-
 
 </body>
 
