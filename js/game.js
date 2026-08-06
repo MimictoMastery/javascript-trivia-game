@@ -31,7 +31,7 @@ async function loadQuestions(){
 
 async function loadQuote(){
     try {
-        let response = await fetch("data/quotes.json");
+        let response = await fetch("../data/quotes.json");
 
         if(!response.ok){
             throw new Error("Quotes file not found");

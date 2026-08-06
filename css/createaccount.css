@@ -10,8 +10,18 @@
     --dark-purple:#090014;
     --indigo:#4B0082;
 }
+* {
+   box-sizing:border-box;
+}
+
+html {
+    height:100%;
+}
 
 body {
+     margin:0;
+    min-height:100vh;
+    
     font-family: Arial, sans-serif;
     background: var(--black);
 

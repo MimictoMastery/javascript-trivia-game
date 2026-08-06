@@ -5,6 +5,8 @@
     --green:#39FF14;
     --yellow:#FFFF33;
     --white:#FFFFFF;
+    --ghostwhite: rgb 248,248,255;
+
 
     --black:#000000;
     --dark-purple:#090014;
@@ -30,12 +32,11 @@ body {
     color:var(--black);
     background:radial-gradient(
         ellipse at bottom,
-        #0a6dde 0%,
+        rgb(54, 5, 54) 5%,
         #090a0f 100%
     );
 
 }
-
 
 
 .game-container {
@@ -44,11 +45,12 @@ body {
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    color: var(--white);
 }
 
 h1 {
 
-    color:blue;
+    color:ghostwhite;
 
     text-shadow:
     0 0 5px white,
@@ -58,12 +60,13 @@ h1 {
 }
 
 .score-board {
-    font-size:5px;
-    color:var(--green);
+    font-size:30px;
+    color:var(--pink);
     margin:10px;
+
     text-shadow:
-    0 0 10px var(--green),
-    0 0 20px var(--green);
+    0 0 10px var(--blue),
+    0 0 20px var(--blue);
 }
 .question-progress {
     display:flex;
@@ -96,8 +99,7 @@ h1 {
     background:var(--cyan);
 
     box-shadow:
-    0 0 10px var(--cyan),
-    0 0 25px var(--cyan),
+    0 0 15px var(--cyan),
     0 0 50px var(--purple);
 }
 
@@ -106,6 +108,7 @@ h1 {
     margin:20px auto;
     padding:15px;
     text-align:center;
+color: var(--white);
 
     border:2px solid var(--pink);
     border-radius:15px;
@@ -118,7 +121,7 @@ h1 {
 }
 
 .trivia-box {
-    background:var(--white);
+    background:rgba(0,0,0,.7);
     width:500px;
     padding:30px;
     border-radius:50px;
