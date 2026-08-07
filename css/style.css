@@ -12,7 +12,6 @@
     --indigo:#4B0082;
 }
 
-
 * {
    box-sizing:border-box;
 }
@@ -20,7 +19,6 @@
 html {
     height:100%;
 }
-
 
 body {
     margin:0;
@@ -121,8 +119,6 @@ h1 {
     0 0 25px var(--purple),
     inset 0 0 40px var(--purple);
 }
-/* GAME TEXT*/
-
 .codequestarcade {
       margin-top:0;
       font-size:
@@ -135,7 +131,6 @@ h1 {
         0 0 20px var(--pink),
         0 0 30px var(--purple);
 }
-
 /*would like to make the power up move, later*/
 
 .powerup {
@@ -153,7 +148,6 @@ h1 {
     text-shadow:
     0 0 10px var(--cyan);
 }
-
 .blink {
     color:var(--white);
     font-weight:bold;
@@ -218,9 +212,6 @@ h1 {
         0 0 20px var(--cyan),
         0 0 40px var(--pink);
 }
-
-/* MOBILE */
-
 
 @media(max-width:500px){
     #game-container {

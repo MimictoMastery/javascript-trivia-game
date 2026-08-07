@@ -38,8 +38,6 @@ body {
     align-items:center;
 
 }
-
-
 body::before {
     content:"";
     position:fixed;
@@ -87,7 +85,6 @@ h1 {
         0 0 10px var(--pink),
         0 0 20px var(--purple);
 }
-
 
 code {
     color:var(--cyan);
@@ -186,10 +183,6 @@ body::after {
     transition:.3s;
 
 }
-
-
-/* Flashing neon effect */
-
 @keyframes startGlow {
 
     from {
@@ -197,35 +190,26 @@ body::after {
         box-shadow:
         0 0 10px var(--pink),
         0 0 25px var(--purple);
-
         transform:scale(1);
-
     }
-
 
     to {
 
         box-shadow:
         0 0 25px var(--cyan),
         0 0 50px var(--pink);
-
         transform:scale(1.1);
-
     }
-
 }
-
 
 .press-start a:hover {
 
     background:var(--cyan);
-
     color:var(--black);
 
     box-shadow:
         0 0 30px var(--cyan),
         0 0 60px var(--pink);
-
 }
 
 @keyframes blinkText {

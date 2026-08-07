@@ -9,57 +9,52 @@ async function loadQuestions(){
 
     try {
         let response = await fetch("../data/questions.json");
-
         if(!response.ok){
             throw new Error("Questions file not found");
         }
-
         questions = await response.json();
         console.log("Questions loaded:", questions);
-
-        showQuestion();
+         showQuestion();
     }
 
     catch(error){
         console.log("Question Error:", error);
-
         document.getElementById("question").textContent =
         "Could not load questions";
     }
 
 }
-
 async function loadQuote(){
-    try {
-        let response = await fetch("../data/quotes.json");
-
-        if(!response.ok){
+      try {
+    let response = await fetch("../data/quotes.json");
+     if(!response.ok){
             throw new Error("Quotes file not found");
         }
 
         let quotes = await response.json();
         console.log("Quotes loaded:", quotes);
-
         let randomQuote =
         Math.floor(Math.random() * quotes.length);
 
         document.getElementById("quote").textContent =
-
         quotes[randomQuote].quote
         + " - "
         + quotes[randomQuote].movie;
     }
+
+
     catch(error){
         console.log("Quote Error:", error);
-
         document.getElementById("quote").textContent =
         "No quote available";
-    }
-}
 
+    }
+
+}
 function updateScore(){
     document.getElementById("score").textContent =
-    score;
+      score;
+
 }
 
 function updateLights(){
@@ -68,23 +63,25 @@ function updateLights(){
 
     lights.forEach(function(light){
         light.classList.remove("active");
-    });
 
+    });
     if(lights[currentQuestion]){
-        lights[currentQuestion]
+ lights[currentQuestion]
         .classList.add("active");
     }
+
 }
 
 function showQuestion(){
     answered = false;
-
+     if(questions.length === 0){
+        return;
+    }
     let question =
     questions[currentQuestion];
 
     document.getElementById("question").textContent =
     question.question;
-
     let buttons =
     document.querySelectorAll(".answers button");
 
@@ -94,60 +91,74 @@ function showQuestion(){
     buttons[3].textContent ="D. " + question.answers.D;
 
     buttons.forEach(function(button){
+
         button.classList.remove("correct");
         button.classList.remove("wrong");
         button.disabled = false;
-    });
 
+    });
     document.getElementById("result").textContent =
 
     "Question "
-    + (currentQuestion + 1)
+      + (currentQuestion + 1)
     + " of "
     + questions.length;
-
     updateLights();
+
     loadQuote();
 }
 
 function checkAnswer(answer){
-    if(answered){return;}
+    if(answered){
+        return;
+        }
+
     answered = true;
+
     let question =
     questions[currentQuestion];
-    let buttons = document.querySelectorAll(".answers button");
+    let buttons =
+    document.querySelectorAll(".answers button");
 
-   let index;
-if (answer === "A") {
-    index = 0;
-}
-else if (answer === "B") {
-    index = 1;
-}
-else if (answer === "C") {
-    index = 2;
-}
-else {
-    index = 3;
-}
+    let index;
 
-let selectedButton = buttons[index];
+    if(answer === "A"){
+        index = 0;
+       }
 
-    buttons.forEach(function(button){button.disabled = true;
+    else if(answer === "B"){
+        index = 1;
+    }
+
+    else if(answer === "C"){
+        index = 2;
+    }
+
+    else{
+        index = 3;
+    }
+
+    let selectedButton =
+    buttons[index];
+
+    buttons.forEach(function(button){
+
+        button.disabled = true;
+
     });
 
     if(answer === question.correct){
         score += 10;
         updateScore();
-
         selectedButton.classList.add("correct");
-        document.getElementById("result").textContent =
 
+        document.getElementById("result").textContent =
         "Correct! Tubular!";
     }
 
-    else {
+    else{
         selectedButton.classList.add("wrong");
+
         document.getElementById("result").textContent =
         "Wrong!";
     }
@@ -162,10 +173,13 @@ function nextQuestion(){
         showQuestion();
     }
 
-    else {
+
+    else{
         endGame();
     }
+
 }
+
 
 function endGame(){
     document.getElementById("question").textContent =
@@ -180,31 +194,37 @@ function endGame(){
     + score
     + " / "
     + (questions.length * 10);
+
     saveScore();
 
     document.getElementById("highScorePage").style.display =
     "block";
 }
 
-function saveScore(){
+async function saveScore(){
+    const name =
+    localStorage.getItem("playerName") || "Player";
+    try{
 
+        await fetch("/scores", {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                name:name,
+                score:score
+            })
+        });
+    }
 
-    let scores =
-    JSON.parse(localStorage.getItem("highScores")) || [];
-    scores.push(score);
-
-    scores.sort(function(a,b){
-        return b-a;
-    });
-
-    scores = scores.slice(0,5);
-    localStorage.setItem( "highScores",
-        JSON.stringify(scores)
-    );
+    catch(error){
+        console.log("Save score error:", error);
+    }
 }
 
 function goToHighScores(){
-    window.location.href =
-    "highscore.html";
+    window.location.href = "/score.html";
 }
+
 loadQuestions();
