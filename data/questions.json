@@ -107,5 +107,109 @@
             "D": "func"
         },
         "correct": "A"
-    }
+    },
+
+    { 
+        "question": "What is JavaScript primarily used for on a website?", 
+        "answers": {
+            "A": "Styling the page",
+            "B": "Adding interactivity and behavior",
+            "C": "Creating database tables",
+            "D": "Hosting the website"
+         },
+        "correct": "B"
+    },
+
+    {
+      "question": "Inside which HTML element do we put the JavaScript?",
+       "answers": {
+            "A": "<script>",
+            "B": "<scripting>",
+            "C": "<js>",
+            "D": "<javascript>"
+    },
+       "correct": "A"
+    },
+
+    {
+        "question": "Where is the correct place to insert a JavaScript?",
+        "answers": {
+            "A": "The <head> section",
+            "B": "The <body> section",
+            "C": "Both the <head> section and the <body> section are correct",
+            "D": "None of the above"
+        },
+        "correct": "C"
+    },
+
+    {
+        "question": "How can you add a comment in a JavaScript?",
+        "answers": {
+            "A": "//This is a comment",
+            "B": "<!This is a comment-->",
+            "C": "`This is a comment",
+            "D": "!This is a copmment"
+        },
+        "correct":"A"
+    },
+
+
+    {
+        "question": "How to insert a comment that has more than one line?",
+        "answers": {
+            "A": "/*This comment has more than one live*/",
+            "B": "<!--This has more than one line-->",
+            "C": "//This comment has more than one line/",
+            "D": "/!This cpmment has more than one line!/"
+        },
+        "correct": "A"
+    },
+
+    {
+        "question": "Which is NOT a legal keyword to declare a variable in JavaScript?",
+        "answers": {
+            "A": "let",
+            "B": "constant",
+            "C": "var",
+            "D": "None of the above"
+        },
+        "correct": "B"
+    },
+
+    {
+       "question": "Which operator is used to assign a value to a variable?",
+        "answers": {
+            "A": "=",
+            "B": "*",
+            "C": "x",
+            "D": "-"
+       },
+       "correct": "A"
+    },
+
+
+
+    { 
+        "question": "What will the following code return: Boolean(10 > 9)",
+         "answers": {
+         "A" : "NaN",
+         "B": "true",
+         "C": "false",
+         "D": "None of the above"
+       },
+       "correct": "B"
+    },
+
+
+{
+    "question": "Is JavaScript case-sensitive?",
+    "answers": {
+    "A": "No",
+    "B": "Yes",
+    "C": "Maybe",
+    "D": "Not a chance"
+    },
+    "correct": "B"
+}
+
 ]
