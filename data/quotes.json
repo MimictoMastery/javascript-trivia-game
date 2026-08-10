@@ -1,22 +1,62 @@
 [
 {
 "quote":"Gag me with a spoon!",
-"movie":"Valley Girl"
+"source":"Valley Girl"
 },
 
 {
 "quote":"Where we're going, we don't need roads.",
-"movie":"Back to the Future"
+"source":"Back to the Future"
 },
 
 {
 "quote":"Wax on. Wax off.",
-"movie":"The Karate Kid"
+"source":"The Karate Kid"
 },
 
 {
 "quote":"I feel the need... the need for speed!",
-"movie":"Top Gun"
+"source":"Top Gun"
+},
+
+{
+"quote":"Do or do not. There is no try!",
+"source":"StarWars"
+},
+
+{
+"quote":"I'm Batman.",
+"source":"Batman"
+},
+
+{
+"quote":"Just say no.",
+"source":"Nancy Reagan"
+},
+
+{
+"quote":"Just Do It",
+"source":"Nike"
+},
+
+{
+"quote":"The choice of a new generation.",
+"source":"Pepsi"
+},
+
+{
+"quote":"Have a break, have a kit kat.",
+"source":"Kit Kat"
+},
+
+{
+"quote":"Milk: It does the body good.",
+"source":"National Milk Processor Board"
+},
+
+{
+"quote":"Snap, crackle, pop",
+"source":"Rice Krispies"
 }
 
 ]

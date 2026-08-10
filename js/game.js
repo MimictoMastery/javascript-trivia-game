@@ -58,14 +58,14 @@ async function loadQuote(){
         document.getElementById("quote").textContent =
         quotes[randomQuote].quote
         + " - "
-        + quotes[randomQuote].movie;
+        + quotes[randomQuote].source;
     }
 
 
     catch(error){
         console.log("Quote Error:", error);
         document.getElementById("quote").textContent =
-        "No quote available";
+        "Quotes are not available right now, Don't have a cow!";
 
     }
 
