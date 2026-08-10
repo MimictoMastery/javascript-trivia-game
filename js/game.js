@@ -1,4 +1,4 @@
-console.log("GAME FILE LOADED");
+console.log("Welcome Back to the 80's");
 
 let questions = [];
 let currentQuestion = 0;
@@ -12,23 +12,42 @@ async function loadQuestions(){
         if(!response.ok){
             throw new Error("Questions file not found");
         }
+
         questions = await response.json();
         console.log("Questions loaded:", questions);
+
+        shuffleQuestions();
          showQuestion();
-    }
 
-    catch(error){
+    } catch (error) {
         console.log("Question Error:", error);
-        document.getElementById("question").textContent =
-        "Could not load questions";
-    }
 
+        document.getElementById("question").textContent =
+            "Error!!! This is TOTALLY BOGUS! Don't have a COW. Try again!!";
+    }
 }
+
+
+function shuffleQuestions() {
+
+    for (let i = questions.length - 1; i > 0; i--) {
+
+        let randomIndex =
+            Math.floor(Math.random() * (i + 1));
+
+        let temporary = questions[i];
+
+        questions[i] = questions[randomIndex];
+
+        questions[randomIndex] = temporary;
+    }
+}
+
 async function loadQuote(){
       try {
     let response = await fetch("../data/quotes.json");
      if(!response.ok){
-            throw new Error("Quotes file not found");
+            throw new Error("Don't have a cow, just refresh yourpage!");
         }
 
         let quotes = await response.json();
