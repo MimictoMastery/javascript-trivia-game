@@ -13,12 +13,12 @@ async function loadQuestions(){
             throw new Error("Questions file not found");
         }
 
-        questions = await response.json();
-        console.log("Questions loaded:", questions);
+       questions = await response.json();
+console.log("Questions loaded:", questions);
 
-        shuffleQuestions();
-         showQuestion();
-
+shuffleQuestions();
+questions = questions.slice(0, 10);
+showQuestion();
     } catch (error) {
         console.log("Question Error:", error);
 
@@ -36,9 +36,7 @@ function shuffleQuestions() {
             Math.floor(Math.random() * (i + 1));
 
         let temporary = questions[i];
-
         questions[i] = questions[randomIndex];
-
         questions[randomIndex] = temporary;
     }
 }
@@ -116,12 +114,7 @@ function showQuestion(){
         button.disabled = false;
 
     });
-    document.getElementById("result").textContent =
-
-    "Question "
-      + (currentQuestion + 1)
-    + " of "
-    + questions.length;
+    
     updateLights();
 
     loadQuote();
@@ -172,17 +165,17 @@ function checkAnswer(answer){
         selectedButton.classList.add("correct");
 
         document.getElementById("result").textContent =
-        "Correct! Tubular!";
+        "Tubular!";
     }
 
     else{
         selectedButton.classList.add("wrong");
 
         document.getElementById("result").textContent =
-        "Wrong!";
+        "OH, SNAP!! Better luck next time.";
     }
 
-    setTimeout(nextQuestion,1200);
+    setTimeout(nextQuestion,1300);
 }
 
 function nextQuestion(){
@@ -200,7 +193,8 @@ function nextQuestion(){
 }
 
 
-function endGame(){
+async function endGame(){
+
     document.getElementById("question").textContent =
     "GAME OVER!";
 
@@ -208,16 +202,14 @@ function endGame(){
     "none";
 
     document.getElementById("result").textContent =
-
     "Final Score: "
     + score
     + " / "
     + (questions.length * 10);
 
-    saveScore();
+    await saveScore();
 
-    document.getElementById("highScorePage").style.display =
-    "block";
+    goToHighScores();
 }
 
 async function saveScore(){
@@ -243,7 +235,6 @@ async function saveScore(){
 }
 
 function goToHighScores(){
-    window.location.href = "/score.html";
+    window.location.href = "score.html";
 }
-
 loadQuestions();
