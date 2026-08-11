@@ -5,9 +5,9 @@
     --green:#39FF14;
     --yellow:#FFFF33;
     --white:#FFFFFF;
-    --ghostwhite: rgb 248,248,255;
+    --ghostwhite:#F8F8FF;
 
-
+    --blue:#0099FF;
     --black:#000000;
     --dark-purple:#090014;
     --indigo:#4B0082;
@@ -51,12 +51,12 @@ body {
 
 h1 {
 
-    color:ghostwhite;
+    color:var(--ghostwhite);
 
     text-shadow:
-    0 0 5px white,
-    0 0 10px cyan,
-    0 0 20px blue;
+    0 0 5px var(--ghostwhite),
+    0 0 10px var(--cyan),
+    0 0 20px var(--blue);
 
 }
 
@@ -238,12 +238,3 @@ button:hover {
     font-weight:bold;
 }
 
-@keyframes moveStars {
-    from {
-        transform:translateY(0);
-    }
-
-    to {
-     transform:translateY(100vh);
-    }
-}
