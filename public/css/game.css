@@ -238,3 +238,12 @@ button:hover {
     font-weight:bold;
 }
 
+@keyframes moveStars {
+    from {
+        transform:translateY(0);
+    }
+
+    to {
+     transform:translateY(100vh);
+    }
+}

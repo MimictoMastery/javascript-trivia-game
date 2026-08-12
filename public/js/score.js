@@ -17,10 +17,10 @@ item.innerHTML =
         list.appendChild(item);
     });
 
-    setTimeout(function() {
-        window.location.href = "/html/index.html";
-    }, 3000);
-
+   
+document.getElementById("playAgain").addEventListener("click", function () {
+    window.location.href = "game.html";
+});
 }
 
 loadScores();
