@@ -10,9 +10,9 @@ scores.forEach(function(player, index) {
   const item = document.createElement("p");
   item.className = "score";
 item.innerHTML =
-'<span class="rank">' + (index + 1) + '.</span>' +
-'<span class="player">' + player.name + '</span>' +
-'<span class="points">' + player.score + '</span>';
+ '<span class="player">' + player.name + '</span>' +
+            '<span class="points">' + player.score + '</span>';
+
 
         list.appendChild(item);
     });
