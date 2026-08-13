@@ -19,7 +19,7 @@ item.innerHTML =
 
    
 document.getElementById("playAgain").addEventListener("click", function () {
-    window.location.href = "game.html";
+    window.location.href = "index.html";
 });
 }
 
