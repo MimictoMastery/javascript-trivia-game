@@ -24,7 +24,7 @@ body {
     margin:0;
     min-height:100vh;
 
-    overflow-y:auto;
+    overflow-y:hidden;
     display:flex;
     justify-content:center;
     align-items:flex-start;
@@ -52,11 +52,11 @@ body {
 h1 {
 
     color:var(--ghostwhite);
-
+    font-size: 25px;
     text-shadow:
     0 0 5px var(--ghostwhite),
     0 0 10px var(--cyan),
-    0 0 20px var(--blue);
+    0 0 15px var(--blue);
 
 }
 
@@ -66,14 +66,14 @@ h1 {
     margin:10px;
 
     text-shadow:
-    0 0 10px var(--blue),
-    0 0 20px var(--blue);
+    0 0 8px var(--pink),
+    0 0 8px var(--blue);
 }
 .question-progress {
     display:flex;
     justify-content:center;
     gap:12px;
-    margin:20px;
+    margin:12px;
 }
 
 .light {
@@ -95,8 +95,9 @@ h1 {
 
 .neon-line {
     width:80%;
+    max-width:500px;
     height:3px;
-    margin:25px auto;
+    margin:17px auto;
     background:var(--cyan);
 
     box-shadow:
@@ -109,6 +110,7 @@ h1 {
     margin:20px auto;
     padding:15px;
     text-align:center;
+    max-width:500px; 
 color: var(--white);
 
     border:2px solid var(--pink);
@@ -123,9 +125,10 @@ color: var(--white);
 
 .trivia-box {
     background:rgba(0,0,0,.7);
-    width:500px;
-    padding:30px;
-    border-radius:50px;
+    width:80%;
+     max-width:500px;
+    padding: 15px;
+    border-radius:30px;
 
     text-align:center;
 
@@ -135,12 +138,10 @@ color: var(--white);
     border:5px solid cyan;
 
     box-shadow:
-
      0 0 10px white,
      0 0 25px cyan,
      0 0 50px #00bfff,
      0 0 80px blue;
-
     animation:glow 2s infinite ease-in-out;
 }
 
