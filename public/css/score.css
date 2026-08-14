@@ -3,9 +3,9 @@
     --cyan: #00FFFF;
     --purple: #8A2BE2;
     --pink: #FF1493;
-    --green: #39FF14;
+    --green:#39FF14;
     --yellow: #FFFF33;
-    --white: #FFFFFF;
+    --white:   #FFFFFF;
     --black: #000000;
     --dark-purple: #090014;
     --indigo: #4B0082;
@@ -22,7 +22,7 @@ html {
 
 body {
     margin: 0;
-    min-height: 100vh;
+    min-height:  100vh;
 
     font-family: Arial, sans-serif;
 
@@ -30,13 +30,13 @@ body {
     radial-gradient(
         ellipse at top,
         var(--indigo),
-        var(--dark-purple) 60%,
+        var(--dark-purple)  60%,
         var(--black)
     );
 
 
     display: flex;
-    align-items: center;
+    align-items:  center;
     justify-content: center;
    
 
@@ -47,7 +47,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    color: var(--purple);
+     color:  var(--purple);
 }
 h1 {
     font-size: 38px;
@@ -71,11 +71,11 @@ text-shadow:
         0 0 15px var(--white),
         0 0 20px var(--pink),
         0 0 30px var(--purple);
-       color:var(--white);
+       color:var(--white);node 
 }
 #game-container {
     width: 350px;
-    margin-top: 20px;
+     margin-top: 20px;
     margin-bottom: 5px;
     margin-left: 0px;
     margin-right: 0px;
@@ -87,7 +87,7 @@ text-shadow:
     padding: 30px;
     width: 100%S;
     max-width: 700px;
-    text-align: center;
+     text-align: center;
     background: var(--white);
 
 
@@ -126,7 +126,7 @@ background: var(--white);
 font-size: 20px;
 padding-top: 22px;
 padding-bottom: 25px;
-padding-left: 5px;
+padding-left:  5px;
 padding-right: 5px;
 font-weight: bold;
 border-radius: 15px;

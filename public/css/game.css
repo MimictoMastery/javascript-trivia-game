@@ -1,16 +1,17 @@
 :root {
     --cyan:#00FFFF;
     --purple:#8A2BE2;
-    --pink:#FF1493;
+     --pink:#FF1493;
     --green:#39FF14;
     --yellow:#FFFF33;
+   
     --white:#FFFFFF;
     --ghostwhite:#F8F8FF;
 
     --blue:#0099FF;
     --black:#000000;
     --dark-purple:#090014;
-    --indigo:#4B0082;
+     --indigo:#4B0082;
 }
 * {
    box-sizing:border-box;
@@ -24,13 +25,13 @@ body {
     margin:0;
     min-height:100vh;
 
-    overflow-y:hidden;
+     overflow-y:hidden;
     display:flex;
     justify-content:center;
     align-items:flex-start;
 
     color:var(--black);
-    background:radial-gradient(
+     background: radial-gradient(
         ellipse at bottom,
         rgb(54, 5, 54) 5%,
         #090a0f 100%
@@ -44,7 +45,7 @@ body {
     width:100%;
     display:flex;
     flex-direction:column;
-    align-items:center;
+     align-items:center;
     justify-content:center;
     color: var(--white);
 }
@@ -52,8 +53,8 @@ body {
 h1 {
 
     color:var(--ghostwhite);
-    font-size: 25px;
-    text-shadow:
+    font-size: 20px;
+     text-shadow:
     0 0 5px var(--ghostwhite),
     0 0 10px var(--cyan),
     0 0 15px var(--blue);
@@ -63,46 +64,47 @@ h1 {
 .score-board {
     font-size:30px;
     color:var(--pink);
-    margin:10px;
+     margin:10px;
 
     text-shadow:
     0 0 8px var(--pink),
-    0 0 8px var(--blue);
+     0 0 8px var(--blue);
 }
 .question-progress {
     display:flex;
     justify-content:center;
     gap:12px;
-    margin:12px;
+      margin:12px;
 }
 
 .light {
     width:20px;
-    height:20px;
+  
     border-radius:50%;
-    background:black;
+      height:20px;
+     background:black;
     border:2px solid var(--green);
 }
 
 .light.active {
     background:var(--green);
     box-shadow:
-
+    0 0 40px var(--green);
     0 0 10px var(--green),
     0 0 20px var(--green),
-    0 0 40px var(--green);
+   
 }
 
 .neon-line {
     width:80%;
-    max-width:500px;
     height:3px;
-    margin:17px auto;
+     max-width:500px;
+    margin:17px;
     background:var(--cyan);
 
     box-shadow:
     0 0 15px var(--cyan),
-    0 0 50px var(--purple);
+     0 0 50px var(--purple);
 }
 
 .quote-box {
@@ -110,7 +112,7 @@ h1 {
     margin:20px auto;
     padding:15px;
     text-align:center;
-    max-width:500px; 
+     max-width:500px; 
 color: var(--white);
 
     border:2px solid var(--pink);
@@ -120,7 +122,7 @@ color: var(--white);
 
     box-shadow:
     0 0 10px var(--pink),
-    0 0 25px var(--pink);
+     0 0 25px var(--pink);
 }
 
 .trivia-box {
@@ -128,7 +130,7 @@ color: var(--white);
     width:80%;
      max-width:500px;
     padding: 15px;
-    border-radius:30px;
+     border-radius:30px;
 
     text-align:center;
 
@@ -138,10 +140,12 @@ color: var(--white);
     border:5px solid cyan;
 
     box-shadow:
+
      0 0 10px white,
      0 0 25px cyan,
      0 0 50px #00bfff,
      0 0 80px blue;
+
     animation:glow 2s infinite ease-in-out;
 }
 
@@ -156,31 +160,31 @@ color: var(--white);
     }
 
 
-    50% {
+    52% {
         box-shadow:
         0 0 20px white,
-        0 0 40px cyan,
+         0 0 40px cyan,
         0 0 80px blue;
     }
 
-    100% {
+    97% {
 
         box-shadow:
         0 0 10px white,
         0 0 20px cyan,
-        0 0 40px blue;
+         0 0 40px blue;
     }
 }
 
 button {
     display:block;
-    width:100%;
-    margin:10px 0;
+    width:98%;
+     margin:10px 0;
     padding:12px;
 
     font-size:18px;
 
-    background:#d5cedd;
+     background:#d5cedd;
     color:rgb(17,26,60);
 
     border:2px solid cyan;
@@ -203,10 +207,10 @@ button:hover {
 .correct {
     background:#ff1493;
     color:white;
-    border-color:pink;
+     border-color:pink;
 
     box-shadow:
-    0 0 10px pink,
+  
     0 0 25px hotpink,
     0 0 50px #ff1493;
 }
@@ -217,8 +221,8 @@ button:hover {
     border-color:violet;
 
     box-shadow:
-    0 0 10px violet,
-    0 0 25px purple,
+   
+      0 0 25px purple,
     0 0 50px #8a2be2;
 }
 
@@ -236,14 +240,13 @@ button:hover {
 
 #result {
     font-size:22px;
-    font-weight:bold;
+     font-weight:bold;
 }
 
 @keyframes moveStars {
     from {
         transform:translateY(0);
     }
-
     to {
      transform:translateY(100vh);
     }

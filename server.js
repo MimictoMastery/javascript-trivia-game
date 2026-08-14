@@ -1,16 +1,18 @@
-const db = require("./database");
-const express = require("express");
-const path = require("path");
+import sqlite3 from "sqlite3";
+import express from "express";
+import path from "path";
+import cors from "cors";
+
+const db = new sqlite3.Database('./scores.db');
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+app.use("/", express.static("./public"));
 
-app.use(express.static("public"));
-app.use("/html", express.static(path.join(__dirname, "public/html")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/html/index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join("./public/html/index.html"));
+// });
 
 const PORT = 1980;
 
@@ -39,6 +41,19 @@ app.post("/scores", (req, res) => {
         return;
       }
       res.json({ message: "Score saved!" });
+    }
+  );
+});
+
+app.post("/clear-scores", (req, res) => {
+  db.run(
+    "DELETE FROM SCORES WHERE name != 'Mimic';",
+    function (err) {
+      if (err) {
+        res.status(500).json({ error: err.message });
+        return;
+      }
+      res.json({ message: "Cleared user scores" });
     }
   );
 });
