@@ -210,6 +210,207 @@
     "D": "Not a chance"
     },
     "correct": "B"
-}
+},
+
+  {
+    "question": "Which keyword declares a variable that can be reassigned?",
+    "answers": {
+      "A": "const",
+      "B": "let",
+      "C": "fixed",
+      "D": "static"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "What is the output of console.log(2 + 3)?",
+    "answers": {
+      "A": "23",
+      "B": "6",
+      "C": "5",
+      "D": "undefined"
+    },
+    "correct": "C"
+  },
+  {
+    "question": "Which symbol is used for a single-line comment in JavaScript?",
+    "answers": {
+      "A": "//",
+      "B": "<!--",
+      "C": "**",
+      "D": "##"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "What does typeof 'Hello' return?",
+    "answers": {
+      "A": "text",
+      "B": "char",
+      "C": "string",
+      "D": "word"
+    },
+    "correct": "C"
+  },
+  {
+    "question": "Which method adds an item to the end of an array?",
+    "answers": {
+      "A": "push()",
+      "B": "pop()",
+      "C": "shift()",
+      "D": "join()"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "Which operator checks both value and type for equality?",
+    "answers": {
+      "A": "=",
+      "B": "==",
+      "C": "!=",
+      "D": "==="
+    },
+    "correct": "D"
+  },
+  {
+    "question": "How do you create a function named greet?",
+    "answers": {
+      "A": "function = greet() {}",
+      "B": "function greet() {}",
+      "C": "new greet function()",
+      "D": "create greet() {}"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "Which value represents a Boolean true or false?",
+    "answers": {
+      "A": "42",
+      "B": "'true'",
+      "C": "true",
+      "D": "null"
+    },
+    "correct": "C"
+  },
+  {
+    "question": "What does array.length tell you?",
+    "answers": {
+      "A": "The number of elements in the array",
+      "B": "The last element's value",
+      "C": "The size of each element",
+      "D": "The number of arrays in memory"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "Which loop repeats while a condition is true?",
+    "answers": {
+      "A": "repeat loop",
+      "B": "while loop",
+      "C": "each loop",
+      "D": "until loop"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "What is the result of 10 % 3?",
+    "answers": {
+      "A": "3",
+      "B": "3.33",
+      "C": "1",
+      "D": "0"
+    },
+    "correct": "C"
+  },
+  {
+    "question": "Which statement displays a message in the browser console?",
+    "answers": {
+      "A": "print('Hello')",
+      "B": "echo('Hello')",
+      "C": "message('Hello')",
+      "D": "console.log('Hello')"
+    },
+    "correct": "D"
+  },
+  {
+    "question": "Which array method creates a new array by transforming each element?",
+    "answers": {
+      "A": "map()",
+      "B": "findIndex()",
+      "C": "pop()",
+      "D": "includes()"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "How do you access an element by its ID in the DOM?",
+    "answers": {
+      "A": "document.getById()",
+      "B": "document.getElementById()",
+      "C": "document.findId()",
+      "D": "window.selectID()"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "Which event commonly occurs when a user clicks an element?",
+    "answers": {
+      "A": "hovered",
+      "B": "pressed",
+      "C": "click",
+      "D": "selected"
+    },
+    "correct": "C"
+  },
+  {
+    "question": "What do backticks allow you to create in JavaScript?",
+    "answers": {
+      "A": "Only comments",
+      "B": "Numbers only",
+      "C": "Boolean values",
+      "D": "Template literals"
+    },
+    "correct": "D"
+  },
+  {
+    "question": "Which keyword returns a value from a function?",
+    "answers": {
+      "A": "return",
+      "B": "break",
+      "C": "yieldValue",
+      "D": "send"
+    },
+    "correct": "A"
+  },
+  {
+    "question": "What does JSON.parse() do?",
+    "answers": {
+      "A": "Turns an object into HTML",
+      "B": "Converts a JSON string into a JavaScript value",
+      "C": "Deletes a JSON file",
+      "D": "Checks whether a variable is a number"
+    },
+    "correct": "B"
+  },
+  {
+    "question": "Which keyword is used to handle errors in a try-catch statement?",
+    "answers": {
+      "A": "error",
+      "B": "handle",
+      "C": "catch",
+      "D": "except"
+    },
+    "correct": "C"
+  },
+  {
+    "question": "Which method converts a JavaScript object into a JSON string?",
+    "answers": {
+      "A": "JSON.convert()",
+      "B": "JSON.parse()",
+      "C": "Object.stringify()",
+      "D": "JSON.stringify()"
+    },
+    "correct": "D"
+  }
 
 ]
